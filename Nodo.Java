@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Nodo {
     int valor;
-    List<Nodo> hijos; // Punto A: Referencias a hijos usando List
+    List<Nodo> hijos;
 
     public Nodo(int valor) {
         this.valor = valor;
