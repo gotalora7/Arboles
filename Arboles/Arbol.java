@@ -1,18 +1,20 @@
+package Arboles;
 
 public class Arbol {
     Nodo raiz;
 
-    public Nodo construirBalanceado(int[] arr, int inicio, int fin) {
+   public Nodo construirBalanceado(int[] arr, int inicio, int fin) {
         if (inicio > fin) return null;
 
         int medio = (inicio + fin) / 2;
         Nodo nuevo = new Nodo(arr[medio]);
 
-        Nodo hijoIzquierdo = construirBalanceado(arr, inicio, medio - 1);
-        Nodo hijoDerecho = construirBalanceado(arr, medio + 1, fin);
+        // Guardamos los hijos en la lista
+        Nodo izq = construirBalanceado(arr, inicio, medio - 1);
+        Nodo der = construirBalanceado(arr, medio + 1, fin);
 
-        if (hijoIzquierdo != null) nuevo.hijos.add(hijoIzquierdo);
-        if (hijoDerecho != null) nuevo.hijos.add(hijoDerecho);
+        if (izq != null) nuevo.hijos.add(izq);
+        if (der != null) nuevo.hijos.add(der);
 
         return nuevo;
     }

@@ -9,4 +9,5 @@ public class Nodo {
         this.valor = valor;
         this.hijos = new ArrayList<>();
     }
+    getNodo
 }
