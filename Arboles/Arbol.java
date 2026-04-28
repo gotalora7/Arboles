@@ -9,7 +9,6 @@ public class Arbol {
         int medio = (inicio + fin) / 2;
         Nodo nuevo = new Nodo(arr[medio]);
 
-        // Guardamos los hijos en la lista
         Nodo izq = construirBalanceado(arr, inicio, medio - 1);
         Nodo der = construirBalanceado(arr, medio + 1, fin);
 
