@@ -1,7 +1,7 @@
 package Arboles;
 
 public class Arbol {
-    Nodo raiz;
+    public Nodo raiz;
 
    public Nodo construirBalanceado(int[] arr, int inicio, int fin) {
         if (inicio > fin) return null;
@@ -20,6 +20,7 @@ public class Arbol {
 
     public void imprimir(Nodo n, String tab) {
         if (n == null) return;
+
         System.out.println(tab + "└── " + n.valor);
         for (Nodo h : n.hijos) {
             imprimir(h, tab + "    ");

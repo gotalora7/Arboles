@@ -7,7 +7,7 @@ public class Main {
         Arrays.sort(datos);
         System.out.println("Lista ordenada: " + Arrays.toString(datos));
 
-        ArbolPro arbol = new ArbolPro();
+        Arbol arbol = new Arbol();
         arbol.raiz = arbol.construirBalanceado(datos, 0, datos.length - 1);
 
         System.out.println("\n--- ESTRUCTURA DEL ÁRBOL (List<Nodo>) ---");

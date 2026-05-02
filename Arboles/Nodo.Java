@@ -1,3 +1,5 @@
+package Arboles;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,5 +11,4 @@ public class Nodo {
         this.valor = valor;
         this.hijos = new ArrayList<>();
     }
-    getNodo
 }
