@@ -38,5 +38,12 @@ public class Arbol {
             imprimir(h, tab + "    ");
         }
     }
-    
+    public int getAltura(Nodo n) {
+    if (n == null) return 0;
+    int max = 0;
+    for (Nodo h : n.hijos) {
+        max = Math.max(max, getAltura(h));
+    }
+    return 1 + max;
+}
 }
