@@ -35,4 +35,13 @@ public class Arbol {
         }
         return 1 + max;
     }
+    class Nodo {
+    public int valor;
+    public List<Nodo> hijos;
+
+    public Nodo(int valor) {
+        this.valor = valor;
+        this.hijos = new ArrayList<>();
+    }
+}
 }
