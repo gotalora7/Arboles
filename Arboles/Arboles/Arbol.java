@@ -1,9 +1,22 @@
 package Arboles;
 
+import java.util.ArrayList;
+import java.util.List;
+
+class Nodo {
+    public int valor;
+    public List<Nodo> hijos;
+
+    public Nodo(int valor) {
+        this.valor = valor;
+        this.hijos = new ArrayList<>();
+    }
+}
+
 public class Arbol {
     public Nodo raiz;
 
-   public Nodo construirBalanceado(int[] arr, int inicio, int fin) {
+    public Nodo construirBalanceado(int[] arr, int inicio, int fin) {
         if (inicio > fin) return null;
 
         int medio = (inicio + fin) / 2;
@@ -20,28 +33,9 @@ public class Arbol {
 
     public void imprimir(Nodo n, String tab) {
         if (n == null) return;
-
         System.out.println(tab + "└── " + n.valor);
         for (Nodo h : n.hijos) {
             imprimir(h, tab + "    ");
         }
     }
-
-    public int getAltura(Nodo n) {
-        if (n == null) return 0;
-        int max = 0;
-        for (Nodo h : n.hijos) {
-            max = Math.max(max, getAltura(h));
-        }
-        return 1 + max;
-    }
-    class Nodo {
-    public int valor;
-    public List<Nodo> hijos;
-
-    public Nodo(int valor) {
-        this.valor = valor;
-        this.hijos = new ArrayList<>();
-    }
-}
 }
